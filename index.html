@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gerador de Card Hash - Pagarme</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">Gerador de Card Hash - Pagarme</h1>
+            <form id="payment_form" action="" method="POST">
+                <div id="form" class="jumbotron">
+                    Chave de encriptação: <input class="form-control" type="text" id="encription_key" required/>
+                    <br/>
+                    Número do cartão: <input class="form-control" type="text" id="card_number" minlength="16" maxlength="16" required/>
+                    <br/>
+                    Nome (como escrito no cartão): <input class="form-control" type="text" id="card_holder_name" required/>
+                    <br/>
+                    Mês de expiração: <input class="form-control" type="text" id="card_expiration_month" maxlength="2" required/>
+                    <br/>
+                    Ano de expiração: <input class="form-control" type="text" id="card_expiration_year" minlength="4" maxlength="4" required/>
+                    <br/>
+                    Código de segurança: <input class="form-control" type="text" id="card_cvv" maxlength="3" required/>
+                    <br/>
+        
+                        <input type="submit" value="Gerar Card Hash" class="btn btn-success btn-lg btn-block"></input>
+                    </form>
+                </div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://assets.pagar.me/pagarme-js/3.0/pagarme.min.js"></script>
+        <script src="./scripts/index.js"/></script>
+    </body>
+</html>
